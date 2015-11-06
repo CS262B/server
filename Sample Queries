@@ -1,0 +1,52 @@
+--Sample Queries
+
+--Gets the coordinates of a building based on its name
+SELECT latitude, longitude
+FROM building
+WHERE
+BuildingName = 'Hiemenga Hall';
+GO
+
+--Gets the relative coordinates of a room based on the room number, floor number and building name
+SELECT RelativeX, RelativeY
+FROM room, floor, building
+WHERE 
+room.FloorID = floor.FloorID
+and
+floor.BuildingID = building.BuildingID
+and
+RoomNum = '301'
+and 
+FloorNum = '3'
+and
+BuildingName = 'Science Building';
+GO
+
+--Gets all rooms on Floor 2 of North Hall
+SELECT RoomNum
+FROM room, floor, building
+WHERE 
+room.FloorID = floor.FloorID
+and
+floor.BuildingID = building.BuildingID
+and
+BuildingName = 'North Hall'
+and
+FloorNum = '2'
+GO
+
+--Shows the floor plan pdf for the 3rd floor of Hiemenga Hall
+SELECT floor.URL 
+FROM floor, building
+where floor.BuildingID = building.BuildingID
+and 
+FloorNum = '3'
+and
+BuildingName = 'Hiemenga Hall'
+GO
+
+USE sheep;
+GO
+
+DROP DATABASE pathfinder;
+GO
