@@ -1,0 +1,39 @@
+--Database script for Pathfinder App
+
+
+--Create the database
+CREATE DATABASE pathfinder;
+GO
+
+--Use the database
+USE pathfinder;
+GO
+
+--Building Table
+CREATE TABLE building (
+	BuildingID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	BuildingName varchar(50),
+	URL varchar(100),
+	latitude decimal(9,6),
+	longitude decimal(9,6)
+	);
+GO
+
+--Floor Table
+CREATE TABLE floor (
+	FloorID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	BuildingID int REFERENCES building(BuildingID),
+	FloorNum int NOT NULL,
+	URL varchar(100)
+	);
+GO
+
+--Room Table
+CREATE TABLE room (
+	RoomID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	FloorID int REFERENCES floor(FloorID),
+	RelativeX int,
+	RelativeY int,
+	RoomNum int
+	);
+GO
