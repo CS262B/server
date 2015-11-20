@@ -50,13 +50,13 @@ public class PathfinderWebService {
     }
 
     /**
-     * PUT method for creating an instance of Person with a given ID - If the
-     * player already exists, replace them with the new player field values. We do this
+     * PUT method for creating an instance of Building with a given ID - If the
+     * building already exists, replace it with the new building field values. We do this
      * because PUT is idempotent, meaning that running the same PUT several
      * times does not change the database.
      *
-     * @param id         the ID for the new player, assumed to be unique
-     * @param buildingLine a string representation of the player in the format: emailAddress name
+     * @param id         the ID for the new building, assumed to be unique
+     * @param buildingLine a string representation of the building in the format: name URL latitude longitude
      * @return status message
      */
     @PUT
@@ -90,69 +90,31 @@ public class PathfinderWebService {
     }
 
     /**
-     * POST method for creating an instance of Person with a new, unique ID
-     * number. We do this because POST is not idempotent, meaning that running
-     * the same POST several times creates multiple objects with unique IDs but
-     * with the same values.
-     * <p/>
-     * The method creates a new, unique ID by querying the player table for the
-     * largest ID and adding 1 to that. Using a sequence would be a better solution.
-     *
-     * @param buildingLine a string representation of the player in the format: emailAddress name
-     * @return status message
+     * @param floorID a floor floorID in the pathfinder database
+     * @return a string version of the floor URL, given the buildingID and floorID
      */
-    @POST
-    @Path("/building")
-    @Consumes("text/plain")
+    @GET
+    @Path("/building/{buildingID}/floor/{floorID}")
     @Produces("text/plain")
-    public String postBuilding(String buildingLine) {
+    public String getFloor(@PathParam("floorID") int floorID, @PathParam("buildingID")int buildingID) {
         String result;
-        StringTokenizer st = new StringTokenizer(buildingLine);
-        int id = -1;
-        String emailAddress = st.nextToken(), name = st.nextToken();
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT MAX(ID) FROM Player");
+            ResultSet resultSet = statement.executeQuery("SELECT URL FROM Floor WHERE FloorID=" + floorID + " AND BuildingID=" + buildingID);
             if (resultSet.next()) {
-                id = resultSet.getInt(1) + 1;
+                result = "" + resultSet.getString(1);
+            } else {
+                result = "nothing found...";
             }
-            statement.executeUpdate("INSERT INTO Player VALUES (" + id + ", '" + emailAddress + "', '" + name + "')");
             resultSet.close();
             statement.close();
             connection.close();
-            result = "Building " + id + " added...";
         } catch (Exception e) {
             result = e.getMessage();
         }
         return result;
-    }
-
-    /**
-     * DELETE method for deleting and instance of player with the given ID. If
-     * the player doesn't exist, then don't delete anything. DELETE is idempotent, so
-     * sending the same command multiple times should result in the same side
-     * effect, though the return value may be different.
-     *
-     * @param id the ID of the player to be returned
-     * @return a simple text confirmation message
-     */
-    @DELETE
-    @Path("/building/{id}")
-    @Produces("text/plain")
-    public String deletePlayer(@PathParam("id") int id) {
-        try {
-            Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
-            Statement statement = connection.createStatement();
-            statement.executeUpdate("DELETE FROM Building WHERE BuildingID=" + id);
-            statement.close();
-            connection.close();
-        } catch (Exception e) {
-            return e.getMessage();
-        }
-        return "Player " + id + " deleted...";
     }
 
     public static void main(String[] args) throws IOException {
