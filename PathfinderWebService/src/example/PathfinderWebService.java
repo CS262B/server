@@ -34,9 +34,9 @@ public class PathfinderWebService {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM Building WHERE BuildingID=" + id);
+            ResultSet resultSet = statement.executeQuery("SELECT latitude, longitude FROM Building WHERE BuildingID=" + id);
             if (resultSet.next()) {
-                result = "" + resultSet.getInt(1) + " " + resultSet.getString(2) + " " + resultSet.getString(3) + " " + resultSet.getFloat(4) + " " + resultSet.getFloat(5);
+                result ="" + resultSet.getFloat(1) + " " + resultSet.getFloat(2);
             } else {
                 result = "nothing found...";
             }
