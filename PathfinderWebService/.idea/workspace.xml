@@ -29,19 +29,20 @@
       <file leaf-file-name="PathfinderWebService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/example/PathfinderWebService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12840466">
-              <caret line="53" column="64" selection-start-line="53" selection-start-column="64" selection-end-line="53" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.5884615">
+              <caret line="104" column="125" selection-start-line="104" selection-start-column="125" selection-end-line="104" selection-end-column="125" />
               <folding>
-                <marker date="1448053117934" expanded="true" signature="1258:1298" placeholder="SELECT * FRO..Building..." />
-                <marker date="1448053117934" expanded="true" signature="3041:3081" placeholder="SELECT * FRO..Player..." />
-                <marker date="1448053117934" expanded="true" signature="3167:3242" placeholder="UPDATE Build..." />
-                <marker date="1448053117934" expanded="true" signature="3167:3285" placeholder="UPDATE Build..." />
-                <marker date="1448053117934" expanded="true" signature="3167:3304" placeholder="UPDATE Playe..." />
-                <marker date="1448053117934" expanded="true" signature="3434:3506" placeholder="INSERT INTO ..." />
-                <marker date="1448053117934" expanded="true" signature="3434:3542" placeholder="INSERT INTO ..." />
-                <marker date="1448053117934" expanded="true" signature="4487:4523" placeholder="SELECT * FRO..Building..." />
-                <marker date="1448053117934" expanded="true" signature="4487:4551" placeholder="SELECT * FRO..Floor..." />
-                <marker date="1448053117934" expanded="true" signature="4487:4554" placeholder="SELECT URL F..Floor..." />
+                <element signature="imports" expanded="true" />
+                <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+                <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+                <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+                <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+                <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+                <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+                <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+                <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+                <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+                <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
               </folding>
             </state>
           </provider>
@@ -62,9 +63,6 @@
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response13.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -110,8 +108,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -151,18 +147,22 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PathfinderWebService" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
@@ -815,7 +815,9 @@
       <workItem from="1447890829154" duration="21000" />
       <workItem from="1447891200860" duration="4982000" />
       <workItem from="1447896221806" duration="903000" />
-      <workItem from="1448051061050" duration="2116000" />
+      <workItem from="1448051061050" duration="2747000" />
+      <workItem from="1448916084493" duration="206000" />
+      <workItem from="1448916319773" duration="268000" />
     </task>
     <task id="LOCAL-00001" summary="Changed to implement getBuilding and putBuilding to work and access rows of the building table">
       <created>1447897011628</created>
@@ -823,11 +825,17 @@
       <option name="project" value="LOCAL" />
       <updated>1447897011628</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added getFloor method">
+      <created>1448053209522</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1448053209522</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17728000" />
+    <option name="totallyTimeSpent" value="18833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1616" height="916" extended-state="6" />
@@ -835,15 +843,11 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32920793" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -852,12 +856,16 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39851484" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39851484" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32920793" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32920793" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -874,7 +882,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed to implement getBuilding and putBuilding to work and access rows of the building table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed to implement getBuilding and putBuilding to work and access rows of the building table" />
+    <MESSAGE value="Added getFloor method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getFloor method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -892,25 +901,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448053117934" expanded="true" signature="1258:1298" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="3041:3081" placeholder="SELECT * FRO..Player..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3242" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3285" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3304" placeholder="UPDATE Playe..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3506" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3542" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4523" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4551" placeholder="SELECT * FRO..Floor..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4554" placeholder="SELECT URL F..Floor..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/jersey-bundle-1.12.jar!/com/sun/jersey/spi/scanning/AnnotationScannerListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -919,25 +921,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448053117934" expanded="true" signature="1258:1298" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="3041:3081" placeholder="SELECT * FRO..Player..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3242" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3285" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3304" placeholder="UPDATE Playe..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3506" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3542" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4523" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4551" placeholder="SELECT * FRO..Floor..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4554" placeholder="SELECT URL F..Floor..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/jersey-bundle-1.12.jar!/com/sun/jersey/spi/scanning/AnnotationScannerListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,16 +941,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448053117934" expanded="true" signature="1258:1298" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="3041:3081" placeholder="SELECT * FRO..Player..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3242" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3285" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3304" placeholder="UPDATE Playe..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3506" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3542" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4523" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4551" placeholder="SELECT * FRO..Floor..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4554" placeholder="SELECT URL F..Floor..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
           </folding>
         </state>
       </provider>
@@ -964,7 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -973,16 +968,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448053117934" expanded="true" signature="1258:1298" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="3041:3081" placeholder="SELECT * FRO..Player..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3242" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3285" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3304" placeholder="UPDATE Playe..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3506" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3542" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4523" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4551" placeholder="SELECT * FRO..Floor..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4554" placeholder="SELECT URL F..Floor..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
           </folding>
         </state>
       </provider>
@@ -991,7 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,16 +995,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448053117934" expanded="true" signature="1258:1298" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="3041:3081" placeholder="SELECT * FRO..Player..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3242" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3285" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3304" placeholder="UPDATE Playe..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3506" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3542" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4523" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4551" placeholder="SELECT * FRO..Floor..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4554" placeholder="SELECT URL F..Floor..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
           </folding>
         </state>
       </provider>
@@ -1018,7 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1027,16 +1022,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448053117934" expanded="true" signature="1258:1298" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="3041:3081" placeholder="SELECT * FRO..Player..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3242" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3285" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3304" placeholder="UPDATE Playe..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3506" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3542" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4523" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4551" placeholder="SELECT * FRO..Floor..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4554" placeholder="SELECT URL F..Floor..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
           </folding>
         </state>
       </provider>
@@ -1045,7 +1041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,16 +1049,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448053117934" expanded="true" signature="1258:1298" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="3041:3081" placeholder="SELECT * FRO..Player..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3242" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3285" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3304" placeholder="UPDATE Playe..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3506" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3542" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4523" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4551" placeholder="SELECT * FRO..Floor..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4554" placeholder="SELECT URL F..Floor..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
           </folding>
         </state>
       </provider>
@@ -1072,7 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1081,16 +1076,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448053117934" expanded="true" signature="1258:1298" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="3041:3081" placeholder="SELECT * FRO..Player..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3242" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3285" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3304" placeholder="UPDATE Playe..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3506" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3542" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4523" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4551" placeholder="SELECT * FRO..Floor..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4554" placeholder="SELECT URL F..Floor..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
           </folding>
         </state>
       </provider>
@@ -1099,7 +1095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,16 +1103,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448053117934" expanded="true" signature="1258:1298" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="3041:3081" placeholder="SELECT * FRO..Player..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3242" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3285" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3304" placeholder="UPDATE Playe..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3506" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3542" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4523" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4551" placeholder="SELECT * FRO..Floor..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4554" placeholder="SELECT URL F..Floor..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
           </folding>
         </state>
       </provider>
@@ -1126,7 +1122,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1135,16 +1130,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448053117934" expanded="true" signature="1258:1298" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="3041:3081" placeholder="SELECT * FRO..Player..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3242" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3285" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3304" placeholder="UPDATE Playe..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3506" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3542" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4523" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4551" placeholder="SELECT * FRO..Floor..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4554" placeholder="SELECT URL F..Floor..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
           </folding>
         </state>
       </provider>
@@ -1153,25 +1149,79 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/example/PathfinderWebService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12840466">
-          <caret line="53" column="64" selection-start-line="53" selection-start-column="64" selection-end-line="53" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1448053117934" expanded="true" signature="1258:1298" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="3041:3081" placeholder="SELECT * FRO..Player..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3242" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3285" placeholder="UPDATE Build..." />
-            <marker date="1448053117934" expanded="true" signature="3167:3304" placeholder="UPDATE Playe..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3506" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="3434:3542" placeholder="INSERT INTO ..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4523" placeholder="SELECT * FRO..Building..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4551" placeholder="SELECT * FRO..Floor..." />
-            <marker date="1448053117934" expanded="true" signature="4487:4554" placeholder="SELECT URL F..Floor..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jersey-bundle-1.12.jar!/com/sun/jersey/spi/scanning/AnnotationScannerListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/PathfinderWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jersey-bundle-1.12.jar!/com/sun/jersey/spi/scanning/AnnotationScannerListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/example/PathfinderWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5884615">
+          <caret line="104" column="125" selection-start-line="104" selection-start-column="125" selection-end-line="104" selection-end-column="125" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1448916427083" expanded="true" signature="1270:1312" placeholder="SELECT latit..Building..." />
+            <marker date="1448916427083" expanded="true" signature="3013:3053" placeholder="SELECT * FRO..Player..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3214" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3257" placeholder="UPDATE Build..." />
+            <marker date="1448916427083" expanded="true" signature="3139:3276" placeholder="UPDATE Playe..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3478" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="3406:3514" placeholder="INSERT INTO ..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4495" placeholder="SELECT * FRO..Building..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4523" placeholder="SELECT * FRO..Floor..." />
+            <marker date="1448916427083" expanded="true" signature="4459:4526" placeholder="SELECT URL F..Floor..." />
           </folding>
         </state>
       </provider>
@@ -1216,7 +1266,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1228,11 +1278,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>lab09</last-edited>
+          <last-edited>PathfinderWebService</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
