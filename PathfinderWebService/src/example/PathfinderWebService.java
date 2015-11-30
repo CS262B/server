@@ -22,19 +22,19 @@ public class PathfinderWebService {
     private static String DB_PASSWORD = "postgres";
 
     /**
-     * @param id a player id in the monopoly database
-     * @return a string version of the player record, if any, with the given id
+     * @param name a player name in the monopoly database
+     * @return a string version of the player record, if any, with the given name
      */
     @GET
-    @Path("/building/{id}")
+    @Path("/building/{name}")
     @Produces("text/plain")
-    public String getBuilding(@PathParam("id") int id) {
+    public String getBuilding(@PathParam("name") int name) {
         String result;
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT latitude, longitude FROM Building WHERE BuildingID=" + id);
+            ResultSet resultSet = statement.executeQuery("SELECT latitude, longitude FROM Building WHERE BuildingName=" + name);
             if (resultSet.next()) {
                 result ="" + resultSet.getFloat(1) + " " + resultSet.getFloat(2);
             } else {
