@@ -1,5 +1,5 @@
 --Building Table
-CREATE TABLE building (
+CREATE TABLE Building (
 	BuildingID int NOT NULL PRIMARY KEY,
 	BuildingName varchar(50),
 	latitude decimal(9,6),
@@ -7,7 +7,7 @@ CREATE TABLE building (
 	);
 
 --Floor Table
-CREATE TABLE floor (
+CREATE TABLE Floor (
 	FloorID int NOT NULL PRIMARY KEY,
 	BuildingID int REFERENCES building(BuildingID),
 	FloorNum int NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE floor (
 	);
 
 --Room Table
-CREATE TABLE room (
+CREATE TABLE Room (
 	RoomID int NOT NULL PRIMARY KEY,
 	FloorID int REFERENCES floor(FloorID),
 	RelativeX int,
@@ -23,8 +23,8 @@ CREATE TABLE room (
 	RoomNum int
 	);
 
-INSERT INTO building
-  values (1, 'Science Building', 42.930923, -85.588726),
+INSERT INTO Building
+  VALUES (1, 'Science Building', 42.930923, -85.588726),
          (2, 'North Hall', 42.931194, -85.588696),
          (3, 'Devries Hall', 42.930902, -85.589321),
          (4, 'Engineering Building', 42.931475, -85.589911),
