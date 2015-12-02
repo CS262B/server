@@ -26,7 +26,7 @@ public class PathfinderWebService {
      * @return a string version of the player record, if any, with the given name
      */
     @GET
-    @Path("/building/{name}")
+    @Path("/building?name={name}")
     @Produces("text/plain")
     public String getBuilding(@PathParam("name") int name) {
         String result;
@@ -36,7 +36,7 @@ public class PathfinderWebService {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM Building WHERE BuildingName=" + name);
             if (resultSet.next()) {
-                result ="" + resultSet.getInt(1) + resultSet.getString(2) + resultSet.getFloat(3) + " " + resultSet.getFloat(4);
+                result ="" + resultSet.getInt(1) + " " + resultSet.getString(2) + " " + resultSet.getFloat(3) + " " + resultSet.getFloat(4);
             } else {
                 result = "nothing found...";
             }
@@ -60,7 +60,7 @@ public class PathfinderWebService {
      * @return status message
      */
     @PUT
-    @Path("/building/{id}")
+    @Path("/building?id={id}")
     @Consumes("text/plain")
     @Produces("text/plain")
     public String putBuilding(@PathParam("id") int id, String buildingLine) {
@@ -134,6 +134,5 @@ public class PathfinderWebService {
             System.out.println("Caught ArrayIndexOutOfBoundsException!");
             System.out.println("Exception message: " + e.getMessage());
         }
-
     }
 }
