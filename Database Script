@@ -1,78 +1,63 @@
---Database script for Pathfinder App
-
-
---Create the database
-CREATE DATABASE pathfinder;
-GO
-
---Use the database
-USE pathfinder;
-GO
-
 --Building Table
-CREATE TABLE building (
+CREATE TABLE Building (
 	BuildingID int NOT NULL PRIMARY KEY,
 	BuildingName varchar(50),
 	latitude decimal(9,6),
 	longitude decimal(9,6)
 	);
-GO
 
 --Floor Table
-CREATE TABLE floor (
+CREATE TABLE Floor (
 	FloorID int NOT NULL PRIMARY KEY,
 	BuildingID int REFERENCES building(BuildingID),
 	FloorNum int NOT NULL,
 	URL varchar(100)
 	);
-GO
 
 --Room Table
-CREATE TABLE room (
+CREATE TABLE Room (
 	RoomID int NOT NULL PRIMARY KEY,
 	FloorID int REFERENCES floor(FloorID),
 	RelativeX int,
 	RelativeY int,
 	RoomNum int
 	);
-GO
 
-INSERT INTO building
-  values (1, 'Science Building', 42.930923, -85.588726),
-          (2, 'North Hall', 42.931194, -85.588696),
-          (3, 'Devries Hall', 42.930902, -85.589321),
-          (4, 'Engineering Building', 42.931475, -85.589911),
-					(5, 'Spoelhof Center', 42.929650, -85.589267),
-					(6, 'Chapel', 42.929377, -85.588495),
-					(7, 'Hiemenga Hall', 42.930037, -85.588377),
-					(8, 'Hekman Library', 42.929983, -85.587236),
-					(9, 'Covenant Fine Arts Center', 42.930534, -85.586341),
-					(10, 'Commons Annex', 42.930539, -85.587185),
-					(11, 'Johnnys', 42.931279, -85.587425),
-					(12, 'Campus Sotre', 42.930997, -85.587028),
-					(13, 'Commons', 42.931326, -85.587126),
-					(14, 'DeVos Communication Center', 42.929983, -85.583579),
-					(15, 'Prince Conference Center', 42.930186, -85.582335),
-					(16, 'Calvin Theological Seminary', 42.928394, -85.586759),
-					(17, 'Bolt', 42.931891, -85.587931),
-					(18, 'Heyns', 42.931921, -85.587950),
-					(19, 'Timmer', 42.931930, -85.587964),
-					(20, 'Schultze', 42.931818, -85.586796),
-					(21, 'Eldersveld', 4.931804, -85.586803),
-					(22, 'Rooks', 42.932428, -85.587702),
-					(23, 'Van Dellen', 42.932466, -85.587684),
-					(24, 'Noordewier', 42.933224, -85.587016),
-					(25, 'VanderWerp', 42.933243, -85.586990),
-					(26, 'Beets', 42.932632, -85.586050),
-					(27, 'Veenstra', 42.932657, -85.586025),
-					(28, 'Knollcrest Dining Hall', 42.933085, -85.5862490),
-					(29, 'Boer', 42.933879, -85.586632),
-					(30, 'Bennink', 42.933856, -85.586625),
-					(31, 'Huizenga', 42.934474, -85.587035),
-					(32, 'Kalsbeek', 42.934474, -85.587094),
-					(33, 'VanReken', 42.934955, -85.587560),
-					(34, 'Spoelhof Fieldhouse', 42.932898, -85.589063),
-					(35, 'Hoogenboom', 42.932878, -85.589084),
-					(36, 'Pool', 42.932875, -85.589144),
-					(37, 'Rock Wall', 42.932909, -85.589112);
-					GO
+INSERT INTO Building
+  VALUES (1, 'Science Building', 42.930923, -85.588726),
+         (2, 'North Hall', 42.931194, -85.588696),
+         (3, 'Devries Hall', 42.930902, -85.589321),
+         (4, 'Engineering Building', 42.931475, -85.589911),
+	 (5, 'Spoelhof Center', 42.929650, -85.589267),
+	 (6, 'Chapel', 42.929377, -85.588495),
+	 (7, 'Hiemenga Hall', 42.930037, -85.588377),
+	 (8, 'Hekman Library', 42.929983, -85.587236),
+	 (9, 'Covenant Fine Arts Center', 42.930534, -85.586341),
+	 (10, 'Commons Annex', 42.930539, -85.587185),
+	 (11, 'Johnnys', 42.931279, -85.587425),
+	 (12, 'Campus Sotre', 42.930997, -85.587028),
+	 (13, 'Commons', 42.931326, -85.587126),
+	 (14, 'DeVos Communication Center', 42.929983, -85.583579),
+	 (15, 'Prince Conference Center', 42.930186, -85.582335),
+	 (16, 'Calvin Theological Seminary', 42.928394, -85.586759),
+	 (17, 'Bolt', 42.931891, -85.587931),
+	 (18, 'Heyns', 42.931921, -85.587950),
+	 (19, 'Timmer', 42.931930, -85.587964),
+	 (20, 'Schultze', 42.931818, -85.586796),
+	 (21, 'Eldersveld', 4.931804, -85.586803),
+	 (22, 'Rooks', 42.932428, -85.587702),
+	 (23, 'Van Dellen', 42.932466, -85.587684),
+	 (24, 'Noordewier', 42.933224, -85.587016),
+	 (25, 'VanderWerp', 42.933243, -85.586990),
+	 (26, 'Beets', 42.932632, -85.586050),
+	 (27, 'Veenstra', 42.932657, -85.586025),
+	 (28, 'Knollcrest Dining Hall', 42.933085, -85.5862490),
+	 (29, 'Boer', 42.933879, -85.586632),
+	 (30, 'Bennink', 42.933856, -85.586625),
+	 (31, 'Huizenga', 42.934474, -85.587035),
+	 (32, 'Kalsbeek', 42.934474, -85.587094),
+	 (33, 'VanReken', 42.934955, -85.587560),
+	 (34, 'Spoelhof Fieldhouse', 42.932898, -85.589063),
+	 (35, 'Hoogenboom', 42.932878, -85.589084),
+	 (36, 'Pool', 42.932875, -85.589144),
+	 (37, 'Rock Wall', 42.932909, -85.589112);
