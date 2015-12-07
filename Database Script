@@ -1,7 +1,7 @@
 -- Drop previous versions of the tables if they they exist, in reverse order of foreign keys.
-DROP TABLE IF EXISTS Room
-DROP TABLE IF EXISTS Floor
-DROP TABLE IF EXISTS Building
+DROP TABLE IF EXISTS Room;
+DROP TABLE IF EXISTS Floor;
+DROP TABLE IF EXISTS Building;
 
 --Building Table
 CREATE TABLE Building (
