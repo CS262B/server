@@ -11,107 +11,70 @@ import java.util.StringTokenizer;
 import javax.ws.rs.*;
 
 /**
- * Created by drd26 on 11/18/2015.
+ * Class PathfinderWebService implements the RESTful web service for the Pathfinder app
  */
 // The Java class will be hosted at the URI path "/pathfinder"
-@Path("/pathfinder/")
-public class WebService {
+@Path("/pathfinder")
+public class PathfinderWebService {
     private static String DB_URI = "jdbc:postgresql://localhost:5432/pathfinder";
     private static String DB_LOGIN_ID = "postgres";
     private static String DB_PASSWORD = "postgres";
 
+    @GET
+    @Path("/")
+    // The Java method will produce content identified by the MIME Media type "text/plain"
+    @Produces("text/plain")
+    public String getWelcomeMessage() {
+        // Return some cliched textual content
+        return "Welcome to the Pathfinder Database";
+    }
+
     /**
-     * @param name a player name in the pathfinder database
-     * @return a string version of the player record, if any, with the given name
+     * @param id a building ID in the pathfinder database
+     * @return a string version of the building record, if any, with the given id
      */
     @GET
-    @Path("/building?name={name}")
-            @Produces("text/plain")
-            public String getBuilding(@PathParam("name") int name) {
-                String result;
-                try {
-                    Class.forName("org.postgresql.Driver");
-                    Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
-                    Statement statement = connection.createStatement();
-                    ResultSet resultSet = statement.executeQuery("SELECT * FROM Building WHERE BuildingName=" + name);
-                    if (resultSet.next()) {
-                        result ="" + resultSet.getInt(1) + " " + resultSet.getString(2) + " " + resultSet.getFloat(3) + " " + resultSet.getFloat(4);
-                    } else {
-                        result = "nothing found...";
-                    }
-                    resultSet.close();
-                    statement.close();
-                    connection.close();
-                } catch (Exception e) {
-                    result = e.getMessage();
-                }
-                return result;
+    @Path("/building/{id}")
+    @Produces("text/plain")
+    public String getBuilding(@PathParam("id") int id) {
+        String result;
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM Building WHERE BuildingID=" + id);
+            if (resultSet.next()) {
+                result ="" + resultSet.getInt(1) + " " + resultSet.getString(2) + " " + resultSet.getFloat(3) + " " + resultSet.getFloat(4);
+            } else {
+                result = "nothing found...";
             }
-
-            /**
-             * PUT method for creating an instance of Building with a given ID - If the
-             * building already exists, replace it with the new building field values. We do this
-             * because PUT is idempotent, meaning that running the same PUT several
-             * times does not change the database.
-             *
-             * @param id         the ID for the new building, assumed to be unique
-             * @param buildingLine a string representation of the building in the format: name URL latitude longitude
-             * @return status message
-             */
-            @PUT
-            @Path("/building?id={id}")
-            @Consumes("text/plain")
-            @Produces("text/plain")
-            public String putBuilding(@PathParam("id") int id, String buildingLine) {
-                String result;
-                StringTokenizer st = new StringTokenizer(buildingLine);
-                String name = st.nextToken(), URL = st.nextToken();
-                double latitude = Double.parseDouble(st.nextToken()), longitude = Double.parseDouble(st.nextToken());
-                try {
-                    Class.forName("org.postgresql.Driver");
-                    Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
-                    Statement statement = connection.createStatement();
-                    ResultSet resultSet = statement.executeQuery("SELECT * FROM building WHERE BuildingID=" + id);
-                    if (resultSet.next()) {
-                        statement.executeUpdate("UPDATE building SET BuildingName='" + name + "' URL='" + URL + "' latitude=" + latitude + " longitude=" + longitude + " WHERE BuildingID=" + id);
-                        result = "Building " + id + " updated...";
-                    } else {
-                        statement.executeUpdate("INSERT INTO building VALUES (" + id + ", '" + name + "', '" + URL + "', " + latitude + ", " + longitude + ")");
-                        result = "Building " + id + " added...";
-                    }
-                    resultSet.close();
-                    statement.close();
-                    connection.close();
-                } catch (Exception e) {
-                    result = e.getMessage();
-                }
-                return result;
-            }
-
-            /**
-             * @param floorID a floor floorID in the pathfinder database
-             * @return a string version of the floor URL, given the buildingID and floorID
-             */
-            @GET
-            @Path("/building/{buildingID}/floor/{floorID}")
-            @Produces("text/plain")
-            public String getFloor(@PathParam("floorID") int floorID, @PathParam("buildingID")int buildingID) {
-                String result;
-                try {
-                    Class.forName("org.postgresql.Driver");
-                    Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
-                    Statement statement = connection.createStatement();
-                    ResultSet resultSet = statement.executeQuery("SELECT URL FROM Floor WHERE FloorID=" + floorID + " AND BuildingID=" + buildingID);
-                    if (resultSet.next()) {
-                        result = "" + resultSet.getString(1);
-                    } else {
-                        result = "nothing found...";
-                    }
-                    resultSet.close();
-                    statement.close();
-                    connection.close();
-                } catch (Exception e) {
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (Exception e) {
             result = e.getMessage();
+        }
+        return result;
+    }
+
+    @GET
+    @Path("/buildings")
+    @Produces("text/plain")
+    public String getBuildings() {
+        String result = "";
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM Building");
+            while (resultSet.next()) {
+                result += resultSet.getInt(1) + "," + resultSet.getString(2) + "," + resultSet.getFloat(3) + "," + resultSet.getFloat(4) + "\n";
+            }
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (Exception e) {
+            result = e.getMessage().toString();
         }
         return result;
     }
