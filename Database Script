@@ -1,5 +1,4 @@
 -- Drop previous versions of the tables if they they exist, in reverse order of foreign keys.
-DROP TABLE IF EXISTS Room;
 DROP TABLE IF EXISTS Floor;
 DROP TABLE IF EXISTS Building;
 
@@ -17,15 +16,6 @@ CREATE TABLE Floor (
 	BuildingID int REFERENCES building(BuildingID),
 	FloorNum int NOT NULL,
 	URL varchar(100)
-	);
-
---Room Table
-CREATE TABLE Room (
-	RoomID int NOT NULL PRIMARY KEY,
-	FloorID int REFERENCES floor(FloorID),
-	RelativeX int,
-	RelativeY int,
-	RoomNum int
 	);
 
 INSERT INTO Building
